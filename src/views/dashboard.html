@@ -9,55 +9,9 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title><%= htmlWebpackPlugin.options.title %> | Story App</title>
   </head>
-  <body style="height: 2000px">
+  <body>
     <header class="container-fluid gx-0">
-      <nav class="navbar navbar-dark bg-dark">
-        <div class="container-fluid px-sm-2 px-md-5">
-          <!-- logo -->
-          <a class="navbar-brand fs-2 fw-bold" href="#">StoryApp</a>
-
-          <!-- offcanvas -->
-          <div
-            class="offcanvas offcanvas-end"
-            tabindex="-1"
-            id="offcanvasRight"
-            aria-labelledby="offcanvasRightLabel"
-          >
-            <div class="offcanvas-header justify-content-end">
-              <button
-                type="button"
-                class="btn-close text-reset"
-                data-bs-dismiss="offcanvas"
-                aria-label="Close"
-              ></button>
-            </div>
-            <div class="offcanvas-body">
-              <!-- navigation -->
-              <div class="container text-center mx-auto w-75">
-                <div class="navbar-item m-2">
-                  <a href="#" class="p-2 rounded-pill">Add Story</a>
-                </div>
-                <div class="navbar-item m-2">
-                  <a href="#" class="p-2 rounded-pill">Dashboard</a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- offcanvas toggle -->
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="offcanvas"
-            data-bs-target="#offcanvasRight"
-            aria-controls="offcanvasRight"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-        </div>
-      </nav>
+      <nav class="navbar navbar-dark bg-dark"><%= nav %></nav>
     </header>
 
     <main class="container-fluid gx-0">
@@ -67,7 +21,7 @@
       >
         <img
           src="/img/patrick-tomasso-Oaqk7qqNh_c-unsplash.webp"
-          class="img-fluid position-absolute w-100"
+          class="img-fluid position-absolute w-100 h-100"
           alt="story image"
         />
 
@@ -84,56 +38,17 @@
       <div class="main-body container-fluid gx-0 my-3">
         <h4 class="my-3 text-center">Our Story</h4>
 
-        <div class="row w-100 gx-0 justify-content-center px-5 gap-3 my-3">
-          <div class="col align-self-center">
-            <div class="card text-white bg-dark">
-              <img src="..." class="card-img-top" alt="..." />
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-                <p class="card-text">
-                  Some quick example text to build on the card title and make up the bulk of the
-                  card's content.
-                </p>
-                <a href="#" class="card-link">Card link</a>
-                <a href="#" class="card-link">Another link</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col align-self-center">
-            <div class="card text-white bg-dark">
-              <img src="..." class="card-img-top" alt="..." />
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-                <p class="card-text">
-                  Some quick example text to build on the card title and make up the bulk of the
-                  card's content.
-                </p>
-                <a href="#" class="card-link">Card link</a>
-                <a href="#" class="card-link">Another link</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col align-self-center">
-            <div class="card text-white bg-dark">
-              <img src="..." class="card-img-top" alt="..." />
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-                <p class="card-text">
-                  Some quick example text to build on the card title and make up the bulk of the
-                  card's content.
-                </p>
-                <a href="#" class="card-link">Card link</a>
-                <a href="#" class="card-link">Another link</a>
-              </div>
-            </div>
-          </div>
-        </div>
+        <div
+          id="card-story-container"
+          class="row w-100 gx-0 justify-content-center px-5 gap-3 my-3"
+        ></div>
       </div>
     </main>
+
+    <footer class="container-fluid bg-dark text-white py-2 d-flex justify-content-center">
+      <div class="row align-items-center pt-2">
+        <div class="col"><%= footerContent %></div>
+      </div>
+    </footer>
   </body>
 </html>
