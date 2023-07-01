@@ -4,11 +4,13 @@ import '../scss/main.scss';
 // Import javascript file as needed
 import Dashboard from './pages/dashboard';
 import Add from './pages/add';
+import AboutUs from './pages/about-us';
 import * as bootstrap from 'bootstrap';
 
 const routes = {
   '/': Dashboard,
   '/add.html': Add,
+  '/about-us.html': AboutUs,
 };
 
 const detectRoute = () => routes[window.location.pathname];

@@ -9,7 +9,7 @@ const htmlWebpackPluginConfig = {
     nav: `
     <div class="container-fluid px-sm-2 px-md-5">
       <!-- logo -->
-      <a class="navbar-brand fs-2 fw-bold" href="#">StoryApp</a>
+      <a class="navbar-brand fs-2 fw-bold" href="/">StoryApp</a>
 
       <!-- offcanvas -->
       <div
@@ -34,6 +34,9 @@ const htmlWebpackPluginConfig = {
             </div>
             <div class="navbar-item m-2">
               <a href="/add.html" class="p-2 rounded-pill">Add Story</a>
+            </div>
+            <div class="navbar-item m-2">
+              <a href="/about-us.html" class="p-2 rounded-pill">About Us</a>
             </div>
           </div>
         </div>
@@ -104,6 +107,13 @@ module.exports = {
       title: 'Add Story',
       filename: 'add.html',
       template: path.resolve(__dirname, 'src/views/add.html'),
+      ...htmlWebpackPluginConfig,
+    }),
+
+    new HtmlWebpackPlugin({
+      title: 'About Us',
+      filename: 'about-us.html',
+      template: path.resolve(__dirname, 'src/views/about-us.html'),
       ...htmlWebpackPluginConfig,
     }),
 
