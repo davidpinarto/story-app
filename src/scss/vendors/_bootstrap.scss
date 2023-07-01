@@ -2,6 +2,9 @@
 // Bootstrap
 // ==================================================
 
+// custom modules
+@use '../vendors-extensions/custom-styles/offcanvas-body';
+
 //
 // Functions Bootstrap
 //
@@ -68,4 +71,3 @@
 //
 // Tambahkan custom code di sini
 //
-@import '../vendors-extensions/custom-styles/offcanvas-body';

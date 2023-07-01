@@ -11,7 +11,10 @@
   </head>
   <body>
     <header class="container-fluid gx-0">
-      <nav class="navbar navbar-dark bg-dark"><%= nav %></nav>
+      <navigation-container
+        class="navbar navbar-dark bg-dark"
+        brandName="<%= brandName %>"
+      ></navigation-container>
     </header>
 
     <main class="container-fluid gx-0">
@@ -38,10 +41,9 @@
       <div class="main-body container-fluid gx-0 my-3">
         <h4 class="my-3 text-center">Our Story</h4>
 
-        <div
-          id="card-story-container"
+        <card-story-container
           class="row w-100 gx-0 justify-content-center px-5 gap-3 my-3"
-        ></div>
+        ></card-story-container>
       </div>
     </main>
 

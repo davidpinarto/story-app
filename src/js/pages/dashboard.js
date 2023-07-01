@@ -17,7 +17,7 @@ const Dashboard = {
       throw new Error('Invalid, data shoud be an array');
     }
 
-    const cardStoryContainer = document.getElementById('card-story-container');
+    const cardStoryContainer = document.querySelector('card-story-container');
 
     cardStoryContainer.innerHTML = '';
 

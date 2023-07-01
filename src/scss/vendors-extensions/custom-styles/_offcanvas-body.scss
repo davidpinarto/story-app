@@ -1,14 +1,14 @@
+@use '../mixin/link';
+
 .offcanvas-body {
   .navbar-item {
     a {
-      color: #212529;
-      text-decoration: none;
-      display: block;
-    }
+      @include link.offcanvasLink;
 
-    a:hover {
-      color: white;
-      background-color: #212529;
+      &:hover {
+        color: white;
+        background-color: #212529;
+      }
     }
   }
 }

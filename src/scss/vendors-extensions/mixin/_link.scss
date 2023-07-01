@@ -1,0 +1,7 @@
+$dark: #212529;
+
+@mixin offcanvasLink {
+  color: $dark;
+  text-decoration: none;
+  display: block;
+}
