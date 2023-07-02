@@ -7,7 +7,6 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const htmlWebpackPluginConfig = {
   templateParameters: {
     brandName: 'Story App',
-    footerContent: '<p>This website is created with love by David Pinarto</p>',
   },
 };
 
