@@ -8,8 +8,13 @@ class FooterContainer extends LitWithoutShadowDom {
 
   constructor() {
     super();
+    this._checkAvailabilityProperty();
+  }
 
-    this.content = '';
+  _checkAvailabilityProperty() {
+    if (!this.hasAttribute('content')) {
+      throw new Error(`Atribut "content" harus diterapkan pada elemen ${this.localName}`);
+    }
   }
 
   render() {
