@@ -2,26 +2,17 @@ import { html } from 'lit';
 import LitWithoutShadowDom from './base/LitWithoutShadowDom';
 
 class FooterContainer extends LitWithoutShadowDom {
-  static properties = {
-    content: { type: String, reflect: true },
-  };
+  static properties = {};
 
   constructor() {
     super();
-    this._checkAvailabilityProperty();
-  }
-
-  _checkAvailabilityProperty() {
-    if (!this.hasAttribute('content')) {
-      throw new Error(`Atribut "content" harus diterapkan pada elemen ${this.localName}`);
-    }
   }
 
   render() {
     return html`
       <div class="row align-items-center pt-2">
         <div class="col">
-          <p>${this.content}</p>
+          <p>This website is created with <i class="bi bi-heart-fill"></i> by David Pinarto</p>
         </div>
       </div>
     `;
