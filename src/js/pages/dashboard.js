@@ -43,9 +43,16 @@ const Dashboard = {
 
     cardStoryContainer.innerHTML = '';
 
-    dataStory.forEach((item, index) => {
-      cardStoryContainer.innerHTML += this._cardStory(dataStory[index]);
-    });
+    cardStoryContainer.innerHTML = `
+      <loading-spinner></loading-spinner>
+    `;
+    setTimeout(() => {
+      cardStoryContainer.innerHTML = '';
+
+      dataStory.forEach((item, index) => {
+        cardStoryContainer.innerHTML += this._cardStory(dataStory[index]);
+      });
+    }, 5000);
   },
 
   _cardStory({ name, photoUrl, description, createdAt: date }) {

@@ -7,3 +7,4 @@ import './NavAlreadyAuth';
 import './NavNeedAuth';
 import './form/registerForm';
 import './form/loginForm';
+import './utils/Loading';
