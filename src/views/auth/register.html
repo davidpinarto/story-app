@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= htmlWebpackPlugin.options.title %> | Story App</title>
+
+    <style>
+      .form-wrapper {
+        border: solid 1px black;
+        border-radius: 1rem;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="container vh-100 d-flex justify-content-center align-items-center flex-column">
+      <div
+        class="form-wrapper d-flex justify-content-center flex-column align-items-center p-5 w-50 h-75"
+      >
+        <h1 class="mb-5">Registrasi</h1>
+
+        <register-form></register-form>
+      </div>
+    </main>
+  </body>
+</html>

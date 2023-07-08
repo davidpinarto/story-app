@@ -1,9 +1,9 @@
 const AboutUs = {
   async init() {
-    this._initialListener();
+    this._initialData();
   },
 
-  _initialListener() {
+  _initialData() {
     const main = document.querySelector('main');
     return (main.innerHTML = `
       <div class="row bg-dark h-100 gx-0 bg-opacity-75 text-light text-center flex-grow-1 p-5">

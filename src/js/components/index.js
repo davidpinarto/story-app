@@ -3,3 +3,7 @@ import './NavigationContainer';
 import './FooterContainer';
 import './SubmitBtn';
 import './FormApp';
+import './NavAlreadyAuth';
+import './NavNeedAuth';
+import './form/registerForm';
+import './form/loginForm';
