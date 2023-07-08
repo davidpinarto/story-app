@@ -45,6 +45,7 @@ const CheckUserAuth = {
 
   _isUserOnAuthPage(pages) {
     const filteredPages = pages.filter((item) => window.location.pathname.endsWith(item));
+
     return Boolean(filteredPages.length);
   },
 };

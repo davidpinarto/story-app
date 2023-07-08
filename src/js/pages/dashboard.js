@@ -1,4 +1,5 @@
 import CheckUserAuth from './auth/check-user-auth';
+import RequestHttp from '../network/request-http';
 
 const Dashboard = {
   async init() {
@@ -8,12 +9,29 @@ const Dashboard = {
   },
 
   async _initialData() {
-    const fetchRecords = await fetch(
-      'https://raw.githubusercontent.com/dicodingacademy/a565-webtools-labs/099-shared-files/proyek-awal/DATA.json',
-    );
-    const responseRecords = await fetchRecords.json();
-    this._storyData = responseRecords.listStory;
-    this._checkDataAndCreateCardStory(this._storyData);
+    try {
+      this._stories = await RequestHttp.getStories();
+      console.log(this._stories);
+
+      this._storyData = this._stories.data.listStory;
+      this._checkDataAndCreateCardStory(this._storyData);
+    } catch (error) {
+      if (error.response) {
+        // Request berhasil dikirimkan dan mendapatkan response dari web server.
+        // Namun, terjadi error karena status code HTTP berada di luar jangkauan antara 200 hingga 299
+
+        // Properti response berisi data error yang didapat dari server
+        console.log(error.response);
+      } else if (error.request) {
+        // Request telah dikirimkan, tetapi tidak mendapatkan response dari server
+
+        // Properti request berisi object XMLHttpRequest yang berisi request yang dikirimkan
+        console.log(error.request);
+      } else {
+        // Terjadi suatu kesalahan saat mengirimkan request
+        console.log('Error', error.message);
+      }
+    }
   },
 
   _checkDataAndCreateCardStory(dataStory) {
