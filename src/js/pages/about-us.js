@@ -1,5 +1,9 @@
+import CheckUserAuth from './auth/check-user-auth';
+
 const AboutUs = {
   async init() {
+    CheckUserAuth.checkLoginState();
+
     this._initialData();
   },
 

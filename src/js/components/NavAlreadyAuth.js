@@ -1,6 +1,10 @@
 import { html } from 'lit';
 import LitWithoutShadowDom from './base/LitWithoutShadowDom';
 
+import Utils from '../utils/utils';
+import Config from '../config/config';
+import CheckUserAuth from '../pages/auth/check-user-auth';
+
 class NavAlreadyAuth extends LitWithoutShadowDom {
   static properties = {};
 
@@ -38,6 +42,12 @@ class NavAlreadyAuth extends LitWithoutShadowDom {
         </ul>
       </div>
     `;
+  }
+
+  _userLogOut(event) {
+    event.preventDefault();
+    Utils.destroyUserToken(Config.USER_TOKEN_KEY);
+    CheckUserAuth.checkLoginState();
   }
 }
 

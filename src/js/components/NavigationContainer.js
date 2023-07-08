@@ -28,7 +28,6 @@ class NavigationContainer extends LitWithoutShadowDom {
             loginPath="/auth/login.html"
             registerPath="/auth/register.html"
             id="loginMenu"
-            class="d-block"
           ></nav-need-auth>
           <nav-already-auth class="d-none" id="userLoggedMenu"></nav-already-auth>
 
